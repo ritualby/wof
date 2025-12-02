@@ -1,0 +1,66 @@
+---
+const artists = [
+  { name: "Agha Alasya", genre: "Host", img: "/artists/artis1.jpg" },
+  { name: "Sakcal", genre: "Host", img: "/artists/artis2.jpg" },
+  { name: "Ananda Omesh", genre: "Talkshow", img: "/artists/artis3.jpg" },
+  { name: "Lafa Pratomo", genre: "Talkshow", img: "/artists/artis4.jpg" },
+  { name: "Bobby Maulana", genre: "Talkshow", img: "/artists/artis5.jpg" },
+  { name: "Angling Sagaran", genre: "DJ Karaoke Set", img: "/artists/artis6.jpg" },
+  { name: "Rina Aprilia", genre: "DJ Karaoke Set", img: "/artists/artis7.jpg" },
+  { name: "Bayu Asta", genre: "DJ Karaoke Set", img: "/artists/artis8.jpg" },
+  { name: "Nen Putri", genre: "DJ Karaoke Set", img: "/artists/artis9.jpg" },
+  { name: "Dicky Mayasa", genre: "Guest Actor", img: "/artists/artis10.jpg" },
+  { name: "Dio Joans", genre: "Guest Actor", img: "/artists/artis11.jpg" },
+  { name: "Ebho Ayey", genre: "Guest Actor", img: "/artists/artis12.jpg" },
+];
+---
+<section id="artists" class="py-28 bg-black relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-fuchsia-600 rounded-full filter blur-[120px]"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-600 rounded-full filter blur-[150px]"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+    <div class="text-center mb-16 observe">
+      <h2 class="text-6xl md:text-8xl font-black bebas gradient-text mb-4">
+        LINEUP WOF 2.0
+      </h2>
+      <p class="text-xl text-white/60 font-light">Featuring Indonesia's finest guests</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+      {artists.map((a, index) => (
+        <div class="observe group relative overflow-hidden rounded-2xl hover-scale cursor-pointer neon-border" style={`animation-delay: ${index * 0.1}s`}>
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src={a.img} 
+              alt={a.name} 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" 
+            />
+          </div>
+          
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
+          
+          <!-- Artist info -->
+          <div class="absolute bottom-0 left-0 right-0 p-5 transform transition-transform duration-300 group-hover:translate-y-0">
+            <p class="text-xl font-bold bebas tracking-wide">{a.name}</p>
+            <p class="text-sm text-fuchsia-400 font-medium mt-1">{a.genre}</p>
+          </div>
+
+          <!-- Hover effect -->
+          <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-600/0 via-purple-600/0 to-cyan-600/0 group-hover:from-fuchsia-600/30 group-hover:via-purple-600/20 group-hover:to-cyan-600/30 transition-all duration-500"></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- More artists CTA -->
+    <div class="text-center mt-16 observe">
+      <p class="text-xl text-white/70 mb-6">And many more amazing guests...</p>
+      <button class="px-8 py-3 bg-white/5 backdrop-blur-md border-2 border-white/20 rounded-full font-bold hover:bg-white/10 hover:border-white/40 transition-all duration-300 hover:scale-105">
+        VIEW FULL LINEUP
+      </button>
+    </div>
+  </div>
+</section>

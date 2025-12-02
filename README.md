@@ -1,10 +1,8 @@
-# Astro Starter Kit: Basics
+# World of Fantasy Festival
 
-```sh
-npm create astro@latest -- --template basics
-```
+A magical music festival website built with Astro and Tailwind CSS.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> ✨ Experience the ultimate fantasy music festival
 
 ## 🚀 Project Structure
 

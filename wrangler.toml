@@ -1,0 +1,5 @@
+name = "ritual"
+compatibility_date = "2024-01-01"
+
+[vars]
+MIDTRANS_SERVER_KEY="SB-Mid-server-XXXX"
