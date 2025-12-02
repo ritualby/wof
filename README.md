@@ -1,8 +1,8 @@
-# World of Fantasy Festival
+# World of Fantasy by Epigonen 𝕏 Sunshine
 
 A magical music festival website built with Astro and Tailwind CSS.
 
-> ✨ Experience the ultimate fantasy music festival
+> ✨ Experience the soecacular fantasy show
 
 ## 🚀 Project Structure
 
